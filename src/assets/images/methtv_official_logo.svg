@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="100%" height="100%">
+  <defs>
+    <!-- Card Red Gradient -->
+    <linearGradient id="cardRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A51025"/>
+      <stop offset="50%" stop-color="#910D20"/>
+      <stop offset="100%" stop-color="#7B0A1B"/>
+    </linearGradient>
+
+    <!-- Stem Glow Gradient -->
+    <linearGradient id="stemGlow" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FCDDEC" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Shadow for badge -->
+    <filter id="softShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Group for Logo -->
+  <g>
+    <!-- 1. The Red Rounded Emblem Card -->
+    <rect x="110" y="100" width="510" height="280" rx="36" ry="36" fill="url(#cardRedGrad)" filter="url(#softShadow)"/>
+
+    <!-- 2. The Lotus Flower (Rising from top-right of the card) -->
+    <g transform="translate(540, 95)">
+      <!-- Vertical Connecting Stem extending from 'ත්' -->
+      <path d="M-6,5 L6,5 L5,-45 L-5,-45 Z" fill="url(#stemGlow)"/>
+
+      <!-- Lotus Petals in Buddhist Flag Colors -->
+      <!-- A. Bottom Blue Calyx / Petals (Buddhist Blue) -->
+      <path d="M-44,-36 C-30,-28 -15,-26 0,-26 C15,-26 30,-28 44,-36 C35,-42 20,-48 0,-47 C-20,-48 -35,-42 -44,-36 Z" fill="#1C58D9"/>
+
+      <!-- B. Yellow Lower Petals (Buddhist Yellow) -->
+      <path d="M-64,-45 C-42,-34 -20,-38 0,-38 C20,-38 42,-34 64,-45 C48,-56 22,-58 0,-56 C-22,-58 -48,-56 -64,-45 Z" fill="#FFC700"/>
+
+      <!-- C. Outer Crimson Petals (Buddhist Red) -->
+      <!-- Left Red Petal -->
+      <path d="M0,-38 C-25,-55 -60,-65 -78,-85 C-72,-105 -50,-102 -32,-85 C-18,-72 -6,-52 0,-38 Z" fill="#A81026"/>
+      <!-- Right Red Petal -->
+      <path d="M0,-38 C25,-55 60,-65 78,-85 C72,-105 50,-102 32,-85 C18,-72 6,-52 0,-38 Z" fill="#A81026"/>
+
+      <!-- D. White Petals with Red Border (Buddhist White) -->
+      <!-- Left White Petal -->
+      <path d="M0,-38 C-20,-60 -45,-85 -48,-115 C-36,-122 -22,-112 -12,-95 C-4,-74 0,-52 0,-38 Z" fill="#FFFFFF" stroke="#A81026" stroke-width="4" stroke-linejoin="round"/>
+      <!-- Right White Petal -->
+      <path d="M0,-38 C20,-60 45,-85 48,-115 C36,-122 22,-112 12,-95 C4,-74 0,-52 0,-38 Z" fill="#FFFFFF" stroke="#A81026" stroke-width="4" stroke-linejoin="round"/>
+
+      <!-- E. Central Saffron / Orange Flame Petal (Buddhist Orange) -->
+      <path d="M0,-38 C-16,-65 -22,-105 0,-136 C22,-105 16,-65 0,-38 Z" fill="#FF6D00" stroke="#C41029" stroke-width="3"/>
+    </g>
+
+    <!-- 3. Stylized Calligraphy "මෙත්" in pristine bold white -->
+    <g fill="#FFFFFF">
+      <!-- 'මෙ' Part: Curved flowing character -->
+      <path d="M 235 250 C 235 220 250 200 275 188 C 265 178 250 162 230 162 C 205 162 180 185 170 215 C 160 248 165 285 185 305 C 205 325 240 330 265 315 C 285 300 295 280 295 255 C 295 230 280 215 265 215 C 250 215 240 228 240 242 C 240 252 248 260 258 260 C 265 260 270 255 270 250 C 270 240 262 235 255 235 C 250 235 245 240 245 245 C 245 250 248 252 252 252 C 255 252 258 250 258 248 C 258 245 255 242 252 242 Z M 215 225 C 220 205 235 190 250 190 C 260 190 270 198 275 208 C 255 220 242 240 242 265 C 242 285 255 300 272 300 C 255 312 230 310 215 295 C 200 280 195 250 215 225 Z" fill-rule="evenodd"/>
+
+      <!-- Center Loop of 'මෙත්' -->
+      <path d="M 320 240 C 310 210 325 170 360 155 C 395 140 435 155 450 185 C 465 215 450 260 425 285 C 395 315 350 325 315 305 C 295 292 285 270 288 250 C 290 235 302 225 318 228 C 330 230 335 242 332 255 C 330 265 320 270 312 268 C 308 266 305 262 305 258 C 305 255 308 252 312 252 C 315 252 318 255 318 258 Z M 355 185 C 335 195 328 220 335 242 C 352 230 375 210 395 195 C 382 186 368 182 355 185 Z M 418 215 C 398 230 375 252 355 268 C 375 285 405 280 420 262 C 435 242 435 225 418 215 Z" fill-rule="evenodd"/>
+
+      <!-- 'ත්' and Ascending Stem connecting to the Lotus -->
+      <path d="M 450 300 C 475 320 515 310 535 285 C 555 260 558 220 545 180 C 532 140 500 115 470 108 C 455 105 445 115 445 128 C 445 140 455 148 468 150 C 490 155 512 175 520 202 C 528 230 522 258 508 275 C 495 290 472 295 455 282 C 448 276 440 280 438 290 C 435 298 442 305 450 300 Z M 515 365 C 535 320 550 250 548 180 C 545 125 542 65 540 5 C 539 -2 541 -2 542 5 C 545 65 550 130 555 190 C 560 255 545 325 522 368 C 520 372 513 370 515 365 Z"/>
+    </g>
+
+    <!-- 4. Sub-caption "රූ  ප  වා  හි  නී" (Clean Sinhala Typography in White) -->
+    <g fill="#FFFFFF" font-family="'Noto Sans Sinhala', 'Noto Serif Sinhala', serif" font-weight="600" font-size="34">
+      <text x="180" y="362" text-anchor="middle">රූ</text>
+      <text x="275" y="362" text-anchor="middle">ප</text>
+      <text x="370" y="362" text-anchor="middle">වා</text>
+      <text x="465" y="362" text-anchor="middle">හි</text>
+      <text x="555" y="362" text-anchor="middle">නී</text>
+    </g>
+  </g>
+</svg>

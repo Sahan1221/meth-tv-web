@@ -1,0 +1,6 @@
+{
+  "name": "METH TV (මෙත් රූපවාහිනී)",
+  "description": "METH TV (මෙත් රූපවාහිනී) - බොදුනුවන්ගේ හදවතේ නාලිකාව. Official Buddhist Television Channel Web Application & Content Management Platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

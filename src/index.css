@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sinhala: 'Noto Sans Sinhala', 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-sinhala-serif: 'Noto Serif Sinhala', serif;
+    
+    /* METH TV Logo-Derived Theme Palette */
+    --color-primary-maroon: #9C1C24;
+    --color-primary-maroon-hover: #80141D;
+    --color-deep-maroon: #650F18;
+    --color-maroon-light: #FDF4F5;
+    --color-maroon-muted: #F5DADC;
+    --color-border-maroon: #EFCED1;
+
+    /* Lotus Accents */
+    --color-lotus-saffron: #E87928;
+    --color-lotus-saffron-hover: #D0661A;
+    --color-lotus-saffron-light: #FFF7ED;
+    --color-lotus-gold: #F5C518;
+    --color-lotus-blue: #2045A3;
+
+    /* Canvas & Neutrals */
+    --color-bg-warm: #FAF7F5;
+    --color-card-white: #FFFFFF;
+    --color-text-main: #2B2526;
+    --color-text-muted: #6E6264;
+    --color-border-subtle: #EFE6E4;
+  }
+
+  body {
+    font-family: var(--font-sinhala);
+    color: #2B2526;
+    background-color: #FAF7F5;
+  }
+}
+
+.font-sinhala-serif {
+  font-family: 'Noto Serif Sinhala', Georgia, serif;
+}
+
+/* Theme utility helpers */
+.bg-theme-warm {
+  background-color: #FAF7F5;
+}
+.bg-theme-maroon {
+  background-color: #9C1C24;
+}
+.bg-theme-deep-maroon {
+  background-color: #650F18;
+}
+.bg-theme-maroon-light {
+  background-color: #FDF4F5;
+}
+.bg-theme-saffron-light {
+  background-color: #FFF7ED;
+}
+.text-theme-deep {
+  color: #650F18;
+}
+.text-theme-primary {
+  color: #9C1C24;
+}
+.text-theme-saffron {
+  color: #E87928;
+}
+.border-theme-subtle {
+  border-color: #EFE6E4;
+}
+.border-theme-maroon {
+  border-color: #EFCED1;
+}
