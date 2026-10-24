@@ -63,7 +63,7 @@ export const AdminPrograms: React.FC = () => {
     setTitle('');
     setDescription('');
     setCategory('ධර්ම දේශනා');
-    setCoverImage('/src/assets/images/program_dhamma_discussion_1791621325599.jpg');
+    setCoverImage('/assets/images/program_dhamma_discussion_1791621325599.jpg');
     setDate(new Date().toISOString().split('T')[0]);
     setStartTime('ප.ව. 07:00');
     setVenue('මෙත් රූපවාහිනී ප්‍රධාන මැදිරිය');
@@ -276,7 +276,7 @@ export const AdminPrograms: React.FC = () => {
                     <td className="py-3 px-4">
                       <div className="flex items-center gap-3">
                         <img
-                          src={prog.coverImage || '/src/assets/images/program_dhamma_discussion_1791621325599.jpg'}
+                          src={prog.coverImage || '/assets/images/program_dhamma_discussion_1791621325599.jpg'}
                           alt={prog.title}
                           className="w-12 h-9 rounded-lg object-cover border border-[#EFE6E4] shrink-0"
                         />

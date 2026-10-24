@@ -32,7 +32,7 @@ const DEMO_VIDEOS: YouTubeVideoItem[] = [
     id: 'demo-vid-1',
     title: 'සිත සනසන මහා මෛත්‍රී භාවනාව - පූජ්‍ය ගලිගමුවේ ඥාණදීප ස්වාමීන් වහන්සේ',
     description: 'මෙත් රූපවාහිනිය ඔස්සේ විකාශය වූ විශේෂ මෛත්‍රී භාවනා වැඩසටහන. සියලු සත්වයන්ට මෙත් වඩමින් සිත සංසිඳුවා ගන්න.',
-    thumbnailUrl: '/src/assets/images/program_dhamma_discussion_1791621325599.jpg',
+    thumbnailUrl: '/assets/images/program_dhamma_discussion_1791621325599.jpg',
     publishedAt: '2026-10-06T14:30:00Z',
     channelId: 'UC2mAd_TrVm1st6UO2FmzNqw',
     channelTitle: 'Galigamuwe Gnanadeepa Thero',
@@ -42,7 +42,7 @@ const DEMO_VIDEOS: YouTubeVideoItem[] = [
     id: 'demo-vid-2',
     title: 'ජීවිතයට සැනසුම ගෙනදෙන උතුම් සද්ධර්ම දේශනාව - METH TV',
     description: 'ගිහි ජීවිතයේ ගැටලු නිරාකරණය කරගනිමින් ධර්මානුකූලව සැනසීමෙන් ජීවත් වන අයුරු පැහැදිලි කෙරෙන සද්ධර්ම දේශනාව.',
-    thumbnailUrl: '/src/assets/images/hero_dhamma_broadcast_1791621278068.jpg',
+    thumbnailUrl: '/assets/images/hero_dhamma_broadcast_1791621278068.jpg',
     publishedAt: '2026-10-04T09:15:00Z',
     channelId: 'UCnsOUPYQjiFj28SR4IWm5BQ',
     channelTitle: 'METH TV Official',
@@ -52,7 +52,7 @@ const DEMO_VIDEOS: YouTubeVideoItem[] = [
     id: 'demo-vid-3',
     title: 'අසිරිමත් රත්නමාලී මහා සෑ වන්දනාව සහ මල් පූජා පිංකම',
     description: 'ඓතිහාසික රුවන්වැලි මහා සෑ සමිඳුන් අභියස පැවැති නෙළුම් මල් පූජාව සහ ආශිර්වාද සෙත් පිරිත් දේශනාව.',
-    thumbnailUrl: '/src/assets/images/event_poya_sil_program_1791621295192.jpg',
+    thumbnailUrl: '/assets/images/event_poya_sil_program_1791621295192.jpg',
     publishedAt: '2026-09-29T11:00:00Z',
     channelId: 'UCnsOUPYQjiFj28SR4IWm5BQ',
     channelTitle: 'METH TV Official',
@@ -62,7 +62,7 @@ const DEMO_VIDEOS: YouTubeVideoItem[] = [
     id: 'demo-vid-4',
     title: 'සාංඝික කඨින මහා දානමය පුණ්‍යකර්මය - පූර්ණ විකාශය',
     description: 'මහා සංඝරත්නය උදෙසා පූජා කරන ලද උතුම් කඨින චීවර පූජා මහෝත්සවයේ විශේෂ අවස්ථා සහ ධර්ම දේශනාව.',
-    thumbnailUrl: '/src/assets/images/event_kathina_ceremony_1791621311155.jpg',
+    thumbnailUrl: '/assets/images/event_kathina_ceremony_1791621311155.jpg',
     publishedAt: '2026-09-26T16:00:00Z',
     channelId: 'UCPGmdO4neBO3AQejn-4SU_w',
     channelTitle: 'METH TV Dhamma Deshana',
@@ -88,15 +88,20 @@ class YouTubeService {
 
   getEmbedUrl(urlOrId: string): string {
     if (!urlOrId) return '';
-    // If it's a full URL, extract video id
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+
+    // A channel's /live page is not a video ID. Embed the channel's current live stream.
+    const channelLiveMatch = urlOrId.match(/youtube\.com\/channel\/([A-Za-z0-9_-]+)\/live/);
+    if (channelLiveMatch) {
+      return `https://www.youtube.com/embed/live_stream?channel=${channelLiveMatch[1]}`;
+    }
+
+    // Extract a video ID from standard YouTube URLs.
+    const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|live\/)([^#&?]*).*/;
     const match = urlOrId.match(regExp);
     const videoId = (match && match[2].length === 11) ? match[2] : urlOrId;
-    
-    // Return standard privacy-friendly embed URL with autoplay parameter option
+
     return `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`;
   }
-
   async getRecentVideos(channelIds: string[] = []): Promise<{
     videos: YouTubeVideoItem[];
     status: YouTubeFeedStatus;

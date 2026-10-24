@@ -73,7 +73,7 @@ export const CompletedEventsPage: React.FC<CompletedEventsPageProps> = ({ onNavi
               >
                 <div className="relative h-56 overflow-hidden bg-stone-200">
                   <img
-                    src={event.coverImage || '/src/assets/images/event_kathina_ceremony_1791621311155.jpg'}
+                    src={event.coverImage || '/assets/images/event_kathina_ceremony_1791621311155.jpg'}
                     alt={event.title}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

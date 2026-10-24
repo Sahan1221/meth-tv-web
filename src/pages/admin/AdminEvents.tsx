@@ -54,7 +54,7 @@ export const AdminEvents: React.FC<AdminEventsProps> = ({ onViewPublicEvent }) =
     setDescription('');
     setEventDate(new Date().toISOString().split('T')[0]);
     setVenue('මෙත් සෙවන බෞද්ධ මධ්‍යස්ථානය');
-    setCoverImage('/src/assets/images/event_kathina_ceremony_1791621311155.jpg');
+    setCoverImage('/assets/images/event_kathina_ceremony_1791621311155.jpg');
     setPublicationStatus('published');
     setPhotosList([]);
     setErrors({});
@@ -154,7 +154,7 @@ export const AdminEvents: React.FC<AdminEventsProps> = ({ onViewPublicEvent }) =
     e.preventDefault();
     if (!validate()) return;
 
-    const finalCover = coverImage || photosList[0]?.imageUrl || '/src/assets/images/event_kathina_ceremony_1791621311155.jpg';
+    const finalCover = coverImage || photosList[0]?.imageUrl || '/assets/images/event_kathina_ceremony_1791621311155.jpg';
 
     if (editingEvent) {
       const updatedPhotos = photosList.map((p, idx) => ({
@@ -308,7 +308,7 @@ export const AdminEvents: React.FC<AdminEventsProps> = ({ onViewPublicEvent }) =
                     <td className="py-3 px-4">
                       <div className="flex items-center gap-3">
                         <img
-                          src={ev.coverImage || '/src/assets/images/event_kathina_ceremony_1791621311155.jpg'}
+                          src={ev.coverImage || '/assets/images/event_kathina_ceremony_1791621311155.jpg'}
                           alt={ev.title}
                           className="w-12 h-9 rounded-lg object-cover border border-[#EFE6E4] shrink-0"
                         />

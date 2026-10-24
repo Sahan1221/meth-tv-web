@@ -41,7 +41,7 @@ export const AdminNews: React.FC = () => {
     setTitle('');
     setSummary('');
     setContent('');
-    setCoverImage('/src/assets/images/hero_dhamma_broadcast_1791621278068.jpg');
+    setCoverImage('/assets/images/hero_dhamma_broadcast_1791621278068.jpg');
     setPublicationDate(new Date().toISOString().split('T')[0]);
     setEventDate('');
     setPublicationStatus('published');

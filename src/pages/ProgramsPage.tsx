@@ -278,7 +278,7 @@ export const ProgramsPage: React.FC<ProgramsPageProps> = ({
                   >
                     <div className="relative aspect-video overflow-hidden bg-stone-100">
                       <img
-                        src={prog.coverImage || '/src/assets/images/program_dhamma_discussion_1791621325599.jpg'}
+                        src={prog.coverImage || '/assets/images/program_dhamma_discussion_1791621325599.jpg'}
                         alt={prog.title}
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -470,7 +470,7 @@ export const ProgramsPage: React.FC<ProgramsPageProps> = ({
                   >
                     <div className="relative aspect-video overflow-hidden bg-stone-200">
                       <img
-                        src={event.coverImage || '/src/assets/images/event_poya_sil_program_1791621295192.jpg'}
+                        src={event.coverImage || '/assets/images/event_poya_sil_program_1791621295192.jpg'}
                         alt={event.title}
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -531,7 +531,7 @@ export const ProgramsPage: React.FC<ProgramsPageProps> = ({
                 />
               ) : (
                 <img
-                  src={activeModalProgram.coverImage || '/src/assets/images/program_dhamma_discussion_1791621325599.jpg'}
+                  src={activeModalProgram.coverImage || '/assets/images/program_dhamma_discussion_1791621325599.jpg'}
                   alt={activeModalProgram.title}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"

@@ -96,7 +96,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#EFE6E4] bg-stone-900 group">
                 <img
-                  src="/src/assets/images/hero_dhamma_broadcast_1791621278068.jpg"
+                  src="/assets/images/hero_dhamma_broadcast_1791621278068.jpg"
                   alt="මෙත් රූපවාහිනී සජීවී විකාශය"
                   referrerPolicy="no-referrer"
                   className="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-500"
@@ -270,7 +270,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             >
               <div className="relative aspect-video overflow-hidden bg-stone-100">
                 <img
-                  src={program.coverImage || '/src/assets/images/program_dhamma_discussion_1791621325599.jpg'}
+                  src={program.coverImage || '/assets/images/program_dhamma_discussion_1791621325599.jpg'}
                   alt={program.title}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -344,7 +344,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               >
                 <div className="relative aspect-video overflow-hidden bg-stone-200">
                   <img
-                    src={event.coverImage || '/src/assets/images/event_poya_sil_program_1791621295192.jpg'}
+                    src={event.coverImage || '/assets/images/event_poya_sil_program_1791621295192.jpg'}
                     alt={event.title}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
